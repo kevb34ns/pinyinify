@@ -1,0 +1,4 @@
+
+var pinyinify = function(str) {
+
+}
