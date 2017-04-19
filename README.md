@@ -9,3 +9,6 @@ The function `pinyinify()` takes a string parameter, which can be one of the fol
 + A string containing both pinyin words and non-pinyin words, characters, or symbols. Example: `My Chinese name is yang2kai3wen2.` **Be careful:** any word that resembles the structure of pinyin (has a number at the end of it, for example) may be given tone marks. Therefore, it is recommended that you avoid this option if possible.
 
 If you pass a string that meets one of the requirements above, the function will return a string with the tone numbers converted to tone marks. Otherwise, it will return an unchanged string.
+
+## Limitations
+<!-- TODO lowercase only, incomplete validation, etc.-->
