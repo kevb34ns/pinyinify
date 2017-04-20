@@ -20,7 +20,10 @@ These are some current limitations, which may be addressed in the future should 
    - There must be at least one pinyin vowel in the word. The placement of tone marks is correct for any valid pinyin word.
 
 ## Test Page
-An HTML test page allows you to test the function without writing any of your code. Simply open `test.html`, located in the `test/` directory, in your browser, and type some text into the text box to see the result.
+The included HTML test page allows you to test the function without writing any of your code. Simply open `test.html`, located in the `test/` directory, in your browser, and type some text into the text box to see the result.
 
 ## Bugs
 Feel free to report bugs on the issue tracker. I will do my best to get around to them in a timely manner. If you want to contribute improvements to the code, let me know by [sending me an email](mailto:yangkevi@usc.edu) or opening an issue.
+
+## License
+This code is licensed under the MIT License. This means you are free to use and change this code however you want, as long as you include the proper copyright notice and attribution. View the full terms [here](https://github.com/kevinkyang/pinyinify/blob/master/LICENSE).
