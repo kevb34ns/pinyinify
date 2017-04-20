@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-	var submit = function(str) {
-		// document.getElementById('result').innerHTML = pinyinify(str);
-		document.getElementById('result').innerHTML = /ou/.test(str);
-	}
-	</script>
-	<script src="pinyinify.js"></script>
+  <script>
+  var submit = function(str) {
+    document.getElementById('result').innerHTML = pinyinify(str);
+  }
+  </script>
+  <script src="pinyinify.js"></script>
 </head>
 <body>
-	<input type="text" id="textfield" name="textfield">
-	<button onclick="submit(document.getElementById('textfield').value)" name="Submit">Submit</button>
-	<p id="result"></p>
+  <input type="text" id="textfield" name="textfield">
+  <button onclick="submit(document.getElementById('textfield').value)" name="Submit">Submit</button>
+  <p id="result"></p>
 </body>
 </html>
