@@ -1,0 +1,34 @@
+body {
+  padding: 50px;
+  background:#333;
+  color: #fff;
+  font: 14px "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", "微软雅黑体", "STXKaiti", "华文楷体", sans-serif;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  margin-bottom: 5px;
+}
+
+#result-container {
+  margin-top: 40px;
+  visibility: hidden;
+}
+
+#result {
+  border-radius: 2px;
+  padding: 5px;
+  background: #000;
+}
+
+#submit-btn {
+  width: 100%;
+}

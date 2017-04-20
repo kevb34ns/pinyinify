@@ -106,25 +106,27 @@ var pinyinify = function(str) {
             i = 0;
          }
          var toneNumIndex = str.search(/[1-5]/);
-         if (toneNumIndex > 0 && toneNumIndex < 7) {
+         var whitespaceIndex = str.search(/\s/);
+         if (toneNumIndex > 0 && toneNumIndex < 7 &&
+             (whitespaceIndex < 0 || whitespaceIndex > toneNumIndex)) {
 
             res += str.substring(0, toneNumIndex + 1).convertPinyin();
             str = str.substring(toneNumIndex + 1);
+         } else if (whitespaceIndex < 0) {
+
+            res += str.substring(0);
+            str = "";
          } else {
 
-            var whitespaceIndex = str.search(/\s/);
-            if (whitespaceIndex < 0) {
-
-               res += str.substring(0);
-               str = "";
-            } else {
-
-               res += str.substring(0, whitespaceIndex + 1);
-               str = str.substring(whitespaceIndex + 1);
-            }
+            res += str.substring(0, whitespaceIndex + 1);
+            str = str.substring(whitespaceIndex + 1);
          }
+      } else if (i >= str.length) {
 
-      } else {
+         res += str.substring(0);
+         str = "";
+      }
+      else {
 
          i++;
       }

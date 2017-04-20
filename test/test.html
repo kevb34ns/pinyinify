@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div id="outer-container" class="col-md-6 col-md-offset-3">
+    <div class="page-header">
+      <h1>pinyinifyJS Test Page <small><span class="label label-primary"><a href="https://github.com/kevinkyang/pinyinify/blob/master/README.md" target="blank">Help</a></span></small></h1>
+
+    </div>
+    <div class="form-group">
+      <label for="textfield">Text to Convert:</label>
+      <textarea rows="5" id="textfield" name="textfield" class="form-control"></textarea>
+      <!-- <input type="text" id="textfield" name="textfield" class="form-control"> -->
+      <button type="submit" id="submit-btn" class="btn btn-primary" name="Submit">Convert Pinyin</button>
+    </div>
+    <div id="result-container">
+      <label for="result">Result:</label>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- Load Scripts -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+
+    var submit = function(str) {
+
+      $("#result").text(pinyinify(str));
+      $("#result-container").css("visibility", "visible");
+    }
+
+    $(".form-control").focus();
+    $(".form-control").keyup(function(event) {
+
+      if (event.which === 13) {
+
+        submit($("#textfield").val());
+        $(".form-control").blur();
+      }
+    });
+
+    $("#submit-btn").click(function() {
+
+      submit($("#textfield").val());
+      $("#submit-btn").blur();
+    });
+  })
+  </script>
+  <script src="../pinyinify.js"></script>
+</body>
+</html>
